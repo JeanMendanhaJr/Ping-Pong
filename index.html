@@ -72,6 +72,19 @@
         },
       }
 
+      //construção da bola
+      const ball = {
+        x: 300,
+        y: 200,
+        r: 20,
+        draw: function(){
+          canvasCtx.beginPath()
+          canvasCtx.arc(this.x, this.x, this.r, 0, 2 * Math.PI) 
+          canvasCtx.fill()
+        }
+
+      }
+
 
 
       function setup() {
@@ -85,13 +98,8 @@
         line.draw()
         leftPaddle.draw()
         rightPaddle.draw()
+        ball.draw()
         
-
-         //desenha a bola
-         
-         canvasCtx.beginPath()
-         canvasCtx.arc(200, 300, 20, 0, 2 * Math.PI) 
-         canvasCtx.fill()
 
          //desenha placar
 
