@@ -25,22 +25,21 @@
         w: window.innerWidth,
         h: window.innerHeight,
         draw: function(){
-        
-          // desenha o campo
-        canvasCtx.fillStyle = "#286047"
-        canvasCtx.fillRect(0, 0, window.innerWidth, window.innerHeight)
-        }
+          canvasCtx.fillStyle = "#286047"
+          canvasCtx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+        },
       }
 
 
 
       function setup() {
-        canvasEl.width = canvasCtx.width = 
-        canvasEl.height = canvasCtx.height = 
+        canvasEl.width = canvasCtx.width = field.w
+        canvasEl.height = canvasCtx.height = field.h
       }
 
       function draw() {
         field.draw()
+       
 
         canvasCtx.fillStyle = "#ffffff"
 
