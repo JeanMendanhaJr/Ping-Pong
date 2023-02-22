@@ -94,6 +94,20 @@
         directionX: 1,
         directionY: 1,
         _calcPosition: function () {
+          //verifica se o jogador 1 fez um ponto (x > largura do campo)
+          if (this.x > field.w){
+            //verifica se a raquete direita está na posiçao y da bola
+            if (this.y +  this.r > rightPaddle.y &&
+              this.y - this.r > rightPaddle.y + rightPaddle.h
+              ) {
+                //rebate a bola invertendo o sinal de X
+                this._reverseX()
+              } else {
+                //pontuar o jogador 1
+
+              }
+          }
+
           // verifica as laterais superior e inferior do campo
           if (
             (this.y - this.r < 0 && this.directionY < 0)  ||
